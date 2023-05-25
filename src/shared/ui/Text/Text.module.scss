@@ -1,0 +1,66 @@
+.text {
+	line-height: normal;
+	text-transform: none;
+	text-decoration: none;
+
+	&--uppercase {
+		text-transform: uppercase;
+	}
+
+	&--capitalize {
+		text-transform: capitalize;
+	}
+}
+
+.w100 {
+	font-weight: 100;
+}
+
+.w300 {
+	font-weight: 300;
+}
+
+.w400 {
+	font-weight: 400;
+}
+
+.w500 {
+	font-weight: 500;
+}
+
+.w600 {
+	font-weight: 600;
+}
+
+.w700 {
+	font-weight: 700;
+}
+
+.w800 {
+	font-weight: 800;
+}
+
+.w900 {
+	font-weight: 900;
+}
+
+.s-32 {
+	font-size: 3.2rem;
+}
+
+.s-17 {
+	font-size: 1.7rem;
+}
+
+
+.s-16 {
+	font-size: 1.6rem;
+}
+
+.s-14 {
+	font-size: 1.4rem;
+}
+
+.s-12 {
+	font-size: 1.2rem;
+}

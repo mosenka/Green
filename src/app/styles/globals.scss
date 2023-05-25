@@ -1,0 +1,101 @@
+@import "variables";
+
+:root {
+	--color-white: #fff;
+	--color-primary: #3b4a54;
+	--color-dark-green: #00a884;
+	--color-pampas: #eae6df;
+	--color-iron: #d1d7db;
+
+	--color-shadow: 11, 20, 26;
+
+	--color-athens-gray: #f0f2f5;
+	--color-black-haze-01: rgba(11, 20, 26, 0.1);
+
+	--color-shuttle-gray: #54656f;
+
+	--chat-meta: #667781;
+	--background-default-hover: #f5f6f6;
+	--intro-background: #f0f2f5;
+	--intro-border: #25d366;
+	--border-stronger: #e9edef;
+	--intro-secondary: #667781;
+	--conversation-panel-background: #efeae2;
+	--panel-header-icon: #54656f;
+	--outgoing-background: #d9fdd3;
+
+	--message-primary: #111b21;
+	--bubble-meta: #667781;
+	--search-input-background: #f0f2f5
+
+
+}
+
+html {
+	font-size: 0.625em;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: inherit;
+}
+
+body {
+	overflow-x: hidden;
+	min-width: 320px;
+	min-height: 100vh;
+	font-family: $font;
+	color: var(--color-primary);
+	font-size: 1.4rem;
+	line-height: 1.5;
+	font-weight: 400;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+
+svg {
+	flex: 0 0 auto;
+	fill: currentColor;
+}
+
+button {
+	display: inline-block;
+	background-color: transparent;
+	font-family: inherit;
+	font-size: inherit;
+	border: none;
+	outline: none;
+	user-select: none;
+	box-shadow: none;
+	text-align: inherit;
+	color: inherit;
+
+	&:not([disabled]):hover,
+	&:not([disabled]):focus,
+	&:not([disabled]):active {
+		background: inherit;
+		outline: none;
+		user-select: none;
+		box-shadow: none;
+	}
+
+}
+
+input,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+}

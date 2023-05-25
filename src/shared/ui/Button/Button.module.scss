@@ -1,0 +1,38 @@
+.button {
+	outline: none;
+	border: none;
+	user-select: none;
+	font-family: inherit;
+	font-size: inherit;
+	background-color: transparent;
+	color: var(----color-shuttle-gray);
+	padding: 8px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all .3s;
+
+	&:not([disabled]):hover,
+	&:not([disabled]):focus,
+	&:not([disabled]):active {
+		outline: none;
+		border: none;
+		box-shadow: none;
+		background-color: transparent;
+	}
+
+	&:not([disabled]):active {
+		background-color: var(--color-black-haze-01);
+	}
+
+	&.is-transparent {
+		padding: 0;
+
+		&:not([disabled]):active {
+			background-color: transparent;
+		}
+	}
+
+}

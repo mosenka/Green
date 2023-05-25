@@ -1,34 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# WhatsApp simulator
 
-## Getting Started
-
-First, run the development server:
+### локальный запуск проекта
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+запускается на [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Запуск ESLint
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm run lint
+npm run lint:fix
+```
 
-## Learn More
+### Запуск Тестов
 
-To learn more about Next.js, take a look at the following resources:
+(сделала несколько для примера)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run test
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### запуск в режиме production
 
-## Deploy on Vercel
+```bash
+npm run build
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Стек
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Движок [NextJS]('https://nextjs.org/')
+- Архитектурная методология для фронтенд
+  проектов [Feature-Sliced Design]('https://feature-sliced.design/ru/')
+- TypeScript "5.0.4"
+- Scss
+- [SVG sprite loader]('https://www.npmjs.com/package/svg-sprite-loader')
+  и иные
+
+### Инструкция
+
+Реализована простая авторизация (с использованием localStorage)
+
+При запуске открывается страница авторизации, для входа необходимо ввести
+> idInstance && apiTokenInstance
+
+- Далее отправляется запрос на получение состояния аккаунта если статус "authorized" то происходит редирект на главную
+  страницу
+
+- Для создания чата необходимо ввести номер телефона контакта (допустимо через 8 или +7)
+- Для перехода в чат нужно кликнуть по контакту
+- для отправки сообщения нужно кликнуть по кнопке отправки, либо нажать клавишу enter
+- Возможно добавление нескольких контактов, а также отправка сообщений на разные аккауны
+- также реализована возможность выти из аккауна (в header)

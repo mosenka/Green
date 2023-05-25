@@ -1,0 +1,12 @@
+@import "@app/styles/breakpoints";
+
+.sidebar {
+	flex: 0 0 40%;
+	height: calc(100% - 7rem);
+
+	@include tablet {
+		flex: 1 1 30%;
+	}
+
+
+}
