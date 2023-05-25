@@ -53,7 +53,9 @@ export const SendingPanel: React.FC = () => {
 		setMessage(target.value);
 	};
 
-	const handlerKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+	const handlerKeyDown = (
+		event: React.KeyboardEvent<HTMLTextAreaElement>
+	) => {
 		if (event.key === "Enter") {
 			handlerClick();
 		}
