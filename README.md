@@ -1,5 +1,9 @@
 # WhatsApp simulator
 
+## Demo
+
+> https://green-6j8n-grkucqgem-mosenka.vercel.app/
+
 ### локальный запуск проекта
 
 ```bash
