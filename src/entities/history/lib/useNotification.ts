@@ -11,7 +11,7 @@ import { addHistory } from "@entities/history/model/HistorySlice";
 
 export const useNotification = () => {
 	const { data: notification, refetch } = useGetNotificationQuery(undefined, {
-		pollingInterval: 5000,
+		pollingInterval: 500,
 	});
 
 	const [deleteNotification] = useDeleteNotificationMutation();
