@@ -10,6 +10,7 @@ export const Input: React.FC<InputProps> = ({
 	className,
 	placeholderText,
 	isError,
+	handlerKeyDown,
 	...props
 }) => {
 	const inputClasses = classNames(styles.input, className, {
@@ -22,6 +23,7 @@ export const Input: React.FC<InputProps> = ({
 			value={value}
 			onChange={handlerChange}
 			placeholder={placeholderText}
+			onKeyDown={handlerKeyDown}
 			{...props}
 		/>
 	);

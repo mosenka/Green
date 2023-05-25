@@ -9,7 +9,7 @@ export type WebhookType =
 	| "incomingCall";
 
 export interface NotificationType {
-	receiptId: number;
+	receiptId: string;
 	body: {
 		typeWebhook: WebhookType;
 		instanceData: object;

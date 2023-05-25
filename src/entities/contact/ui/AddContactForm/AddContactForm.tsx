@@ -41,7 +41,7 @@ export const AddContactForm: React.FC = () => {
 				handlerChange={handlerChange}
 				placeholderText="введите номер телефона"
 				isError={isError}
-				onKeyDown={handlerKeyDown}
+				handlerKeyDown={handlerKeyDown}
 			/>
 			<Button
 				className={styles.button}

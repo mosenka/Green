@@ -16,14 +16,14 @@ export const EmptyScreen: React.FC = () => {
 					<use xlinkHref={`#${symbol.id}`} />
 				</svg>
 				<Text
-					as="h1"
+					As="h1"
 					weight={300}
 					size={32}
 					className={styles.subtitle}
 				>
 					WhatsApp Web
 				</Text>
-				<Text as="p" size={14} className={styles.desc}>
+				<Text As="p" size={14} className={styles.desc}>
 					Отправляйте и получайте сообщения без необходимости
 					оставлять телефон подключённым. <br />
 					Используйте WhatsApp одновременно на четырёх связанных

@@ -7,6 +7,7 @@ import { TextareaProps } from "./Textarea.types";
 export const Textarea: React.FC<TextareaProps> = ({
 	value,
 	handlerChange,
+	handlerKeyDown,
 	className,
 	...props
 }) => (

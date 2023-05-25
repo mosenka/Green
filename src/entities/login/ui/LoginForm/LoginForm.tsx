@@ -57,6 +57,7 @@ export const LoginForm: React.FC = () => {
 			<div className={styles.input}>
 				<Input
 					placeholderText="idInstance"
+					value={idInstance}
 					handlerChange={(
 						event: React.ChangeEvent<HTMLInputElement>
 					) => setIdInstance(event.target.value)}
@@ -65,6 +66,7 @@ export const LoginForm: React.FC = () => {
 			</div>
 			<div className={styles.input}>
 				<Input
+					value={apiTokenInstance}
 					placeholderText="ApiTokenInstance"
 					handlerChange={(
 						event: React.ChangeEvent<HTMLInputElement>

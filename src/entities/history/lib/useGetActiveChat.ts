@@ -4,7 +4,7 @@ import { useAppSelector } from "@app/hooks/useReducer";
 
 export const useGetActiveChat = () => {
 	const { history } = useAppSelector((state) => state.history);
-	const [activeChatId, setActiveChatId] = useState<string>(null);
+	const [activeChatId, setActiveChatId] = useState<string>();
 
 	useEffect(() => {
 		if (history.length === 0) return;

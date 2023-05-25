@@ -73,7 +73,7 @@ export const SendingPanel: React.FC = () => {
 				value={message}
 				handlerChange={handlerChange}
 				className={styles.field}
-				onKeyDown={handlerKeyDown}
+				handlerKeyDown={handlerKeyDown}
 			/>
 			<Button onClick={handlerClick}>
 				<Icon icon="send" width={24} />

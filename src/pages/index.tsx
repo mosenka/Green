@@ -8,7 +8,7 @@ import { useGetLoginFromLocalStorage } from "@entities/login";
 import { UserAvatar } from "@entities/user";
 import { UserActionGroup } from "@features/userActionGroup";
 
-import { Header, Layout } from "@shared/ui";
+import { Content, Header, Layout, Sidebar } from "@shared/ui";
 import { Chat } from "@widgets/index";
 
 export default function Home() {
@@ -24,17 +24,17 @@ export default function Home() {
 
 	return (
 		<Layout>
-			<Layout.Sidebar>
+			<Sidebar>
 				<Header>
 					<UserAvatar />
 					<UserActionGroup />
 				</Header>
 				<AddContactForm />
 				<ChatList />
-			</Layout.Sidebar>
-			<Layout.Content>
+			</Sidebar>
+			<Content>
 				<Chat />
-			</Layout.Content>
+			</Content>
 		</Layout>
 	);
 }

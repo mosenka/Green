@@ -15,7 +15,10 @@ export const HeaderContact: React.FC<HeaderContactProps> = ({
 	return (
 		<Header>
 			<div className={styles.user}>
-				<Avatar src={contactInfo?.avatar} />
+				<Avatar
+					src={contactInfo?.avatar}
+					altText={contactInfo?.name ? contactInfo.name : ""}
+				/>
 				<div className={styles.info}>
 					<Text As="p">
 						{contactInfo?.name ? contactInfo.name : activeChatId}

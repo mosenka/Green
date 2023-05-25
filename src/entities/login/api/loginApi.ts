@@ -5,13 +5,17 @@ import { commonApi } from "@shared/api/commonApi";
 
 export const loginApi = commonApi.injectEndpoints({
 	endpoints: (build) => ({
-		login: build.query<LoginStatusType, LoginTypes>({
+		login: build.query<LoginStatusType | LoginTypes, LoginTypes>({
 			query(arg) {
 				return {
 					url: `/waInstance${arg.idInstance}/getStateInstance/${arg.apiTokenInstance}`,
 				};
 			},
-			transformResponse: (response, meta, arg) => {
+			transformResponse: (
+				response: LoginStatusType,
+				meta,
+				arg: LoginTypes
+			) => {
 				if (response.stateInstance === "authorized") {
 					localStorage.setItem("user", JSON.stringify(arg));
 					return arg;

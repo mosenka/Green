@@ -6,8 +6,10 @@ import { setupStore } from "../api/store";
 
 const store = setupStore();
 
-export const ReduxProvider: React.FC = ({
-	children,
-}: {
+interface ReduxReduxProviderProps {
 	children: React.ReactNode;
+}
+
+export const ReduxProvider: React.FC<ReduxReduxProviderProps> = ({
+	children,
 }) => <Provider store={store}>{children}</Provider>;

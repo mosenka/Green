@@ -6,7 +6,7 @@ import { commonApi } from "@shared/api/commonApi";
 
 export const notificationApi = commonApi.injectEndpoints({
 	endpoints: (build) => ({
-		getNotification: build.query<NotificationType>({
+		getNotification: build.query<NotificationType, void>({
 			query() {
 				const { apiTokenInstance, idInstance } =
 					getLoginFromLocalStorage();

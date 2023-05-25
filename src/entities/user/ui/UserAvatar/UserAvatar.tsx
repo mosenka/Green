@@ -10,7 +10,7 @@ const SRC =
 export const UserAvatar: React.FC = () => (
 	<Button onClick={() => {}} isTransparent>
 		{SRC ? (
-			<Avatar src={SRC} alt="name" />
+			<Avatar src={SRC} altText="" />
 		) : (
 			<Icon icon="user" width={40} />
 		)}

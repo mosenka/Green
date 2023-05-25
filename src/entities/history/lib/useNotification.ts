@@ -10,7 +10,7 @@ import { useAppDispatch } from "@app/hooks/useReducer";
 import { addHistory } from "@entities/history/model/HistorySlice";
 
 export const useNotification = () => {
-	const { data: notification, refetch } = useGetNotificationQuery(null, {
+	const { data: notification, refetch } = useGetNotificationQuery(undefined, {
 		pollingInterval: 5000,
 	});
 
@@ -26,10 +26,10 @@ export const useNotification = () => {
 			refetch();
 		}
 		const { body } = notification;
-		if (body?.messageData?.typeMessage === "textMessage") {
+		if (body && body?.messageData?.typeMessage === "textMessage") {
 			dispatch(
 				addHistory({
-					chatId: body?.senderData?.chatId,
+					chatId: body.senderData?.chatId ?? "",
 					message: {
 						time: body.timestamp,
 						text: body.messageData?.textMessageData?.textMessage,

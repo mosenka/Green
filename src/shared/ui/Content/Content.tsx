@@ -1,8 +1,8 @@
 import classNames from "classnames";
 import * as React from "react";
 
-import styles from "./Content.module.scss";
-import { ContentProps } from "./Content.types";
+import styles from "shared/ui/Content/Content.module.scss";
+import { ContentProps } from "shared/ui/Content/Content.types";
 
 export const Content: React.FC<ContentProps> = ({ className, children }) => {
 	const contentClassses = classNames(styles.content, className);
